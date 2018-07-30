@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Search</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-15.4%" y="-13.8%" width="130.8%" height="139.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.374478691   0 0 0 0 0.422945662   0 0 0 0 0.791294643  0 0 0 0.142861187 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DA---Homepage" transform="translate(-1133.000000, -294.000000)" fill="#FFFFFF">
+            <g id="Group" filter="url(#filter-1)" transform="translate(1115.000000, 277.000000)">
+                <g id="Search" transform="translate(24.000000, 21.000000)">
+                    <path d="M14.9664804,13.9757914 C16.2048417,12.4897579 16.9832402,10.5791434 16.9832402,8.49162011 C16.9832402,3.82122905 13.1620112,0 8.49162011,0 C3.82122905,0 0,3.82122905 0,8.49162011 C0,13.1620112 3.82122905,16.9832402 8.49162011,16.9832402 C10.5791434,16.9832402 12.4897579,16.2402235 13.9757914,14.9664804 L17.7970205,18.7877095 C17.9385475,18.9292365 18.1154562,19 18.292365,19 C18.4692737,19 18.6461825,18.9292365 18.7877095,18.7877095 C19.0707635,18.5046555 19.0707635,18.0800745 18.7877095,17.7970205 L14.9664804,13.9757914 Z M8.49162011,15.603352 C4.59962756,15.603352 1.41527002,12.4189944 1.41527002,8.52700186 C1.41527002,4.63500931 4.59962756,1.45065177 8.49162011,1.45065177 C12.3836127,1.45065177 15.5679702,4.63500931 15.5679702,8.52700186 C15.5679702,12.4189944 12.3836127,15.603352 8.49162011,15.603352 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

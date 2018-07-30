@@ -1,0 +1,102 @@
+/* Breakpoints
+--------------------------------------------------------------------------- */
+
+$bp-mobile:  640px;
+$bp-tablet:  980px;
+$bp-desktop: 1200px;
+
+
+/* Variables
+--------------------------------------------------------------------------- */
+
+// Couleurs
+$cl-background-light: #F8F9FC;
+$cl-background-dark: #EBEFF3;
+$cl-title: #006AB2;
+$cl-paragraph: #738297;
+
+// Ombres portées
+$bs-block: 0 5px 4px -3px rgba(#E4E5F0, .15),
+	            0 2px 6px rgba(#5F6CCA, .15);
+
+
+
+/* Containers
+--------------------------------------------------------------------------- */
+
+.container {
+	max-width: $bp-desktop;
+	margin: 0 auto;
+
+	@media (max-width: $bp-desktop) {
+		margin: 0 20px;
+	}
+}
+
+
+/* Page
+--------------------------------------------------------------------------- */
+
+
+html, body {
+	background: $cl-background-light;
+}
+
+
+header {
+	position: relative;
+	background: #FFF;
+	padding: 40px 0;
+
+	.logo {
+
+		display: flex;
+		margin-bottom: 40px;
+
+		img {
+			width: 120px;
+			float: left;
+			margin: 0 20px 0 0;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 1rem;
+			font-weight: 400;
+		}
+
+	}
+
+	@include curved-shadow();
+}
+
+
+
+
+section.categories {
+	padding: 3rem 0;
+}
+
+
+section.store-locator {
+	background: $cl-background-dark;
+	border-radius: 10px;
+	box-shadow: $bs-block;
+	margin: 40px 0;
+	display: flex;
+	padding: 2rem;
+	border: 1px solid #DFE3E6;
+
+	img { margin-right: 3rem; }
+	h2, p { text-align: left; }
+
+	position: relative;
+	@include curved-shadow();
+
+}
+
+
+footer {
+	background: $cl-background-dark;
+	padding: 3rem 0 6rem;
+}

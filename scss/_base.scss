@@ -1,0 +1,93 @@
+
+/* Box model
+--------------------------------------------------------------------------- */
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
+/* Tables.
+--------------------------------------------------------------------------- */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    text-align: left;
+    border: 1px solid var(--light-grey);
+}
+
+table caption {
+    font-style: italic;
+    text-align: center;
+    border-width: 1px 1px 0 1px;
+    padding: 0.625rem 0;
+    border: 1px solid var(--light-grey);
+}
+
+table td,
+table th {
+    padding: 0.625rem 1rem;
+    border: 1px solid var(--light-grey);
+}
+
+table thead,
+table tfoot {
+    vertical-align: bottom;
+    padding: 0.625rem 1rem;
+    background: var(--light-grey);
+}
+
+table tfoot {
+    vertical-align: top;
+}
+
+/* Links.
+--------------------------------------------------------------------------- */
+
+a,
+a:link,
+a:visited {
+    text-decoration: underline;
+}
+
+a:focus,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* Images.
+--------------------------------------------------------------------------- */
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+/* Divider.
+--------------------------------------------------------------------------- */
+
+hr {
+    width: 100%;
+    border: 1px solid var(--light-grey);
+    border-width: 1px 0 0 0;
+}
+
+/* Code.
+--------------------------------------------------------------------------- */
+
+code {
+    padding: 2px;
+    white-space: nowrap;
+    border-radius: 2px;
+    font-family: "Consolas", "Monaco", "Menlo", monospace;
+    background: var(--lighter-grey);
+    border: 1px solid var(--light-grey);
+}
