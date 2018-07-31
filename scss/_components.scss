@@ -7,20 +7,50 @@ p.section-intro {
 }
 
 
-/* Thématiques
+/* Moteur de recherche
 --------------------------------------------------------------------------- */
 
-.categories-list {
+
+.search {
+
+	display: flex;
+	margin: 20px auto;
+	max-width: $bp-tablet;
+
+
+	input {
+		padding: 1rem;
+		margin-right: 10px;
+	}
+
+	button {
+		font-size: .1rem;
+		width: 60px;
+		padding: calc( .8rem - 2px);
+		background-color: #007FD8;
+		border-radius: 5px;
+		border: none;
+		border-bottom: 2px solid #006AB2;
+	}
+
+}
+
+
+
+
+/* Catégories et thématiques
+--------------------------------------------------------------------------- */
+
+.card-list {
 
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 
 	padding: 0;
 
-
-	li {
+	.card {
 		margin: 0;
 		width: 23%;
 		margin: 1% 1%;
@@ -35,12 +65,13 @@ p.section-intro {
 	}
 }
 
-.category {
+
+.card {
+
 	background: #FFF;
 
 	border: 1px solid #E2E7EC;
 	border-radius: 10px;
-	box-shadow: $bs-block;
 	padding: .5rem;
 	display: block;
 	list-style: none;
@@ -48,8 +79,7 @@ p.section-intro {
 	text-align: center;
 
 	img {
-		margin: 20px;
-		margin-bottom: .5rem;
+		margin: .5rem auto;
 	}
 
 	a {
@@ -57,7 +87,191 @@ p.section-intro {
 		display: block;
 	}
 
+	//@include block-shadow();
+	@include focus();
+
+
+	&.card-small {
+
+		a {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			text-align: left;
+		}
+
+		figure {
+			margin: .5rem;
+		}
+
+		img {
+			width: 2.5rem;
+			margin: .2rem auto;
+		}
+
+		h3, p {
+			font-size: .8125rem;
+			margin: .5rem
+		}
+
+	}
 }
+
+/* Breadcrumb
+--------------------------------------------------------------------------- */
+
+.breadcrumb {
+
+	margin: 1rem;
+	padding: .5rem;
+	//background: $cl-background-dark;
+	border-radius: 10px;
+	font-size: .9375rem;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	li {
+		list-style: none;
+		margin: .5rem;
+
+		&:not(:last-child):after {
+			content : '›';
+		}
+	}
+
+	a {
+		padding: .5rem;
+		text-decoration: none;
+		color: $cl-title;
+	}
+
+
+
+
+}
+
+
+
+/* Badges et puce numéros
+--------------------------------------------------------------------------- */
+
+.badge {
+	background: $cl-background-dark;
+	padding: .2rem .4rem;
+	margin: .3rem;
+	margin-left: 0;
+	border-radius: 5px;
+	font-size: .6875rem;
+	display: inline-block;
+
+	&.badge-number {
+		margin: 0;
+		margin-left: .5rem;
+		font-size: .625rem;
+		border-radius: 1rem;
+		padding: .1rem .4rem;
+		font-weight: 600;
+	}
+}
+
+
+/* Listes de questions
+--------------------------------------------------------------------------- */
+
+.questions-panel {
+	display: flex;
+	flex-direction: row;
+}
+
+.filters-list {
+
+	width: 15rem;
+
+	ul { padding: 0; }
+
+	a {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		font-size: .8125rem;
+		display: block;
+		text-decoration: none;
+		line-height: 1.4;
+	}
+
+	li {
+		list-style: none;
+		padding: .5rem;
+		padding-left: 0;
+	}
+
+	.badge {
+		float: right;
+	}
+
+}
+
+.questions-list {
+
+
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		margin: .4rem;
+		margin-left: 2.5rem;
+
+	}
+
+	a {
+		text-decoration: none;
+		position: relative;
+		display: block;
+		border-radius: 5px;
+		border: 1px solid transparent;
+		background: transparent;
+
+		padding: .8rem;
+		padding-left: 4rem;
+
+		&:hover, &:focus {
+			background: #FFF;
+		}
+
+		&:before {
+			position: absolute;
+			top: 1.3rem;
+			left: 1.5rem;
+			content: '';
+			display: block;
+			width: 25px;
+			height: 25px;
+			background: url(../images/icons/answer.svg) no-repeat top left;
+			background-size: cover;
+		}
+
+
+		@include focus();
+
+	}
+
+	h3 {
+		//color: $cl-paragraph;
+		font-size: 1rem;
+		margin-bottom: .2rem;
+		font-weight: 400;
+		line-height: 1.6;
+	}
+}
+
 
 
 /* Listes de liens
@@ -66,7 +280,8 @@ p.section-intro {
 .links-list {
 	ul { padding: 0; }
 	li { list-style: none; }
-	a { text-decoration: none; }
+	a { text-decoration: none; font-size: .875rem;}
+
 }
 
 .footer-links {

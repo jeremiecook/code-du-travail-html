@@ -10,28 +10,14 @@ input {
 		width: 200px;
 		border-radius: 50px;
 	}
+
+
 }
 
-.search {
-
-	display: flex;
-	margin: 20px auto;
-	max-width: $bp-tablet;
-
-
-	input {
-		padding: 1rem;
-		margin-right: 10px;
-	}
-
-	button {
-		font-size: .1rem;
-		width: 60px;
-		padding: calc( .8rem - 2px);
-		background-color: #007FD8;
-		border-radius: 5px;
-		border: none;
-		border-bottom: 2px solid #006AB2;
-	}
-
+// Effet de focus
+input, button {
+	@include focus();
 }
+
+
+

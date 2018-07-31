@@ -15,11 +15,7 @@ $cl-background-dark: #EBEFF3;
 $cl-title: #006AB2;
 $cl-paragraph: #738297;
 
-// Ombres portées
-$bs-block: 0 5px 4px -3px rgba(#E4E5F0, .15),
-	            0 2px 6px rgba(#5F6CCA, .15);
-
-
+$tr-default: all .3s ease;
 
 /* Containers
 --------------------------------------------------------------------------- */
@@ -75,20 +71,36 @@ header {
 
 section.categories {
 	padding: 3rem 0;
+	//background: $cl-background-dark;
+	//@include curved-shadow();
 }
 
+section.thematics {
+	background: $cl-background-dark;
+}
+
+
+section.questions {
+
+	//background: #FCFCFE;
+
+	h2 {
+		padding: 3rem 0;
+	}
+}
 
 section.store-locator {
 	background: $cl-background-dark;
 	border-radius: 10px;
-	box-shadow: $bs-block;
-	margin: 40px 0;
+	margin: 3em 6em;
 	display: flex;
 	padding: 2rem;
-	border: 1px solid #DFE3E6;
+	border: 1px solid #D2DBE4;
+	background: #F0F1F6;
 
-	img { margin-right: 3rem; }
+	img { margin-right: 3rem; width: 15%}
 	h2, p { text-align: left; }
+	p { margin-bottom: 1em; }
 
 	position: relative;
 	@include curved-shadow();
