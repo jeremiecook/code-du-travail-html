@@ -1,20 +1,10 @@
-p.section-intro {
-	display: block;
-	text-align: center;
-	margin: 0 auto;
-	max-width: 600px;
-	line-height: 1.6;
-}
-
-
 /* Moteur de recherche
 --------------------------------------------------------------------------- */
-
 
 .search {
 
 	display: flex;
-	margin: 20px auto;
+	margin: 1.25rem auto;
 	max-width: $bp-tablet;
 
 
@@ -24,17 +14,24 @@ p.section-intro {
 	}
 
 	button {
-		font-size: .1rem;
-		width: 60px;
-		padding: calc( .8rem - 2px);
+		//font-size: rem;
+		display: flex;
+		justify-content: space-between;
+		text-align:center;
+		//width: 3.5rem;
+		//padding: calc( .8rem - 2px);
 		background-color: #007FD8;
 		border-radius: 5px;
 		border: none;
 		border-bottom: 2px solid #006AB2;
+
+		img {
+			display: inline-block;
+			margin: .2rem .2rem 0;
+		}
 	}
 
 }
-
 
 
 
@@ -79,12 +76,17 @@ p.section-intro {
 	text-align: center;
 
 	img {
-		margin: .5rem auto;
+		width: 2rem;
+		margin: .8rem auto 0;
 	}
 
 	a {
 		text-decoration: none;
 		display: block;
+	}
+
+	h3 {
+		margin-top: .2rem;
 	}
 
 	//@include block-shadow();
@@ -122,10 +124,9 @@ p.section-intro {
 
 .breadcrumb {
 
-	margin: 1rem;
-	padding: .5rem;
-	//background: $cl-background-dark;
-	border-radius: 10px;
+	//padding: .5rem;
+	background: $cl-background-dark;
+	//border-radius: 10px;
 	font-size: .9375rem;
 
 	ul {
@@ -139,14 +140,17 @@ p.section-intro {
 	li {
 		list-style: none;
 		margin: .5rem;
+		margin-left: 0;
 
 		&:not(:last-child):after {
 			content : '›';
+			padding-right: .4rem;
 		}
 	}
 
 	a {
-		padding: .5rem;
+		padding: 1rem;
+		padding-left: 0;
 		text-decoration: none;
 		color: $cl-title;
 	}
@@ -163,6 +167,7 @@ p.section-intro {
 
 .badge {
 	background: $cl-background-dark;
+	color: $cl-paragraph;
 	padding: .2rem .4rem;
 	margin: .3rem;
 	margin-left: 0;
@@ -193,7 +198,10 @@ p.section-intro {
 
 	width: 15rem;
 
-	ul { padding: 0; }
+	ul {
+		padding: 0;
+		margin-top: .5rem;
+	}
 
 	a {
 		display: flex;
@@ -204,6 +212,12 @@ p.section-intro {
 		display: block;
 		text-decoration: none;
 		line-height: 1.4;
+		color: $cl-paragraph;
+	}
+
+	h4 {
+		font-size: .9375rem;
+		margin-bottom: 0;
 	}
 
 	li {
@@ -219,16 +233,23 @@ p.section-intro {
 }
 
 .questions-list {
-
-
 	margin: 0;
 	padding: 0;
+}
 
-	li {
-		list-style: none;
-		margin: .4rem;
-		margin-left: 2.5rem;
+.question {
 
+	list-style: none;
+	margin: .4rem;
+	margin-left: 2.5rem;
+
+	h3 {
+		//color: $cl-paragraph;
+		font-size: 1rem;
+		margin: 0;
+		margin-bottom: .2rem;
+		font-weight: 400;
+		line-height: 1.6;
 	}
 
 	a {
@@ -249,11 +270,11 @@ p.section-intro {
 		&:before {
 			position: absolute;
 			top: 1.3rem;
-			left: 1.5rem;
+			left: 1.2rem;
 			content: '';
 			display: block;
-			width: 25px;
-			height: 25px;
+			width: 30px;
+			height: 30px;
 			background: url(../images/icons/answer.svg) no-repeat top left;
 			background-size: cover;
 		}
@@ -263,13 +284,6 @@ p.section-intro {
 
 	}
 
-	h3 {
-		//color: $cl-paragraph;
-		font-size: 1rem;
-		margin-bottom: .2rem;
-		font-weight: 400;
-		line-height: 1.6;
-	}
 }
 
 
@@ -288,4 +302,8 @@ p.section-intro {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+
+	a {
+		color: $cl-paragraph;
+	}
 }

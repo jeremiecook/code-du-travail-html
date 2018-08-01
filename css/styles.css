@@ -413,11 +413,6 @@ hr {
   border: 1px solid var(--light-grey);
   border-width: 1px 0 0 0; }
 
-/* Sections
---------------------------------------------------------------------------- */
-section {
-  padding: 3rem 0; }
-
 /* Code.
 --------------------------------------------------------------------------- */
 code {
@@ -441,6 +436,15 @@ code {
     .container {
       margin: 0 20px; } }
 
+.inner {
+  max-width: 620px;
+  margin: 0 auto; }
+
+/* Sections
+--------------------------------------------------------------------------- */
+section {
+  padding: 1rem 0; }
+
 /* Page
 --------------------------------------------------------------------------- */
 html, body {
@@ -449,12 +453,11 @@ html, body {
 header {
   position: relative;
   background: #FFF;
-  padding: 40px 0; }
+  padding: 2rem 0; }
   header .logo {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 40px; }
+    display: flex; }
     header .logo img {
       width: 120px;
       float: left;
@@ -462,7 +465,10 @@ header {
     header .logo a {
       text-decoration: none;
       font-size: 1rem;
-      font-weight: 400; }
+      font-weight: 400;
+      color: #738297; }
+  header .section-header {
+    margin-top: 2rem; }
   header:before {
     content: "";
     position: absolute;
@@ -554,17 +560,15 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   color: #006AB2;
-  line-height: 1.3; }
+  line-height: 1.4; }
 
 h1 {
   font-size: 1.6rem;
-  font-weight: 400;
-  text-align: center; }
+  font-weight: 400; }
 
 h2 {
   font-size: 1.375rem;
-  font-weight: 400;
-  text-align: center; }
+  font-weight: 400; }
 
 h3 {
   font-size: 0.9375rem;
@@ -572,11 +576,11 @@ h3 {
 
 p {
   font-size: 0.9375rem;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #738297; }
 
 a {
-  color: #738297; }
+  color: #006AB2; }
 
 /* Vertical rhythm.
 --------------------------------------------------------------------------- */
@@ -587,12 +591,17 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  margin: 1rem 0 .5rem 0; }
+
 hr,
 p,
 pre,
 table {
   margin: 0 0 .5rem 0; }
+
+.section-header h1, .section-header h2, .section-header p {
+  text-align: center; }
 
 input {
   font-size: 1rem;
@@ -602,7 +611,9 @@ input {
   border: 1px solid #C8CFD9; }
   input.zip-code {
     width: 200px;
-    border-radius: 50px; }
+    border-radius: 50px;
+    padding-left: 1rem;
+    font-size: .875rem; }
 
 input, button {
   -webkit-transition: all 0.3s ease;
@@ -613,32 +624,32 @@ input, button {
     -webkit-box-shadow: 0 0 2px 2px #BFDEFF;
     box-shadow: 0 0 2px 2px #BFDEFF; }
 
-p.section-intro {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 600px;
-  line-height: 1.6; }
-
 /* Moteur de recherche
 --------------------------------------------------------------------------- */
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px auto;
+  margin: 1.25rem auto;
   max-width: 980px; }
   .search input {
     padding: 1rem;
     margin-right: 10px; }
   .search button {
-    font-size: .1rem;
-    width: 60px;
-    padding: calc( .8rem - 2px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: center;
     background-color: #007FD8;
     border-radius: 5px;
     border: none;
     border-bottom: 2px solid #006AB2; }
+    .search button img {
+      display: inline-block;
+      margin: .2rem .2rem 0; }
 
 /* Catégories et thématiques
 --------------------------------------------------------------------------- */
@@ -679,10 +690,13 @@ p.section-intro {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .card img {
-    margin: .5rem auto; }
+    width: 2rem;
+    margin: .8rem auto 0; }
   .card a {
     text-decoration: none;
     display: block; }
+  .card h3 {
+    margin-top: .2rem; }
   .card:hover, .card:focus {
     border: 1px solid #80BDFF;
     -webkit-box-shadow: 0 0 2px 2px #BFDEFF;
@@ -710,9 +724,7 @@ p.section-intro {
 /* Breadcrumb
 --------------------------------------------------------------------------- */
 .breadcrumb {
-  margin: 1rem;
-  padding: .5rem;
-  border-radius: 10px;
+  background: #EBEFF3;
   font-size: .9375rem; }
   .breadcrumb ul {
     padding: 0;
@@ -729,11 +741,14 @@ p.section-intro {
     justify-content: flex-start; }
   .breadcrumb li {
     list-style: none;
-    margin: .5rem; }
+    margin: .5rem;
+    margin-left: 0; }
     .breadcrumb li:not(:last-child):after {
-      content: '›'; }
+      content: '›';
+      padding-right: .4rem; }
   .breadcrumb a {
-    padding: .5rem;
+    padding: 1rem;
+    padding-left: 0;
     text-decoration: none;
     color: #006AB2; }
 
@@ -741,6 +756,7 @@ p.section-intro {
 --------------------------------------------------------------------------- */
 .badge {
   background: #EBEFF3;
+  color: #738297;
   padding: .2rem .4rem;
   margin: .3rem;
   margin-left: 0;
@@ -769,7 +785,8 @@ p.section-intro {
 .filters-list {
   width: 15rem; }
   .filters-list ul {
-    padding: 0; }
+    padding: 0;
+    margin-top: .5rem; }
   .filters-list a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -784,7 +801,11 @@ p.section-intro {
     font-size: .8125rem;
     display: block;
     text-decoration: none;
-    line-height: 1.4; }
+    line-height: 1.4;
+    color: #738297; }
+  .filters-list h4 {
+    font-size: .9375rem;
+    margin-bottom: 0; }
   .filters-list li {
     list-style: none;
     padding: .5rem;
@@ -795,11 +816,18 @@ p.section-intro {
 .questions-list {
   margin: 0;
   padding: 0; }
-  .questions-list li {
-    list-style: none;
-    margin: .4rem;
-    margin-left: 2.5rem; }
-  .questions-list a {
+
+.question {
+  list-style: none;
+  margin: .4rem;
+  margin-left: 2.5rem; }
+  .question h3 {
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: .2rem;
+    font-weight: 400;
+    line-height: 1.6; }
+  .question a {
     text-decoration: none;
     position: relative;
     display: block;
@@ -811,27 +839,22 @@ p.section-intro {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    .questions-list a:hover, .questions-list a:focus {
+    .question a:hover, .question a:focus {
       background: #FFF; }
-    .questions-list a:before {
+    .question a:before {
       position: absolute;
       top: 1.3rem;
-      left: 1.5rem;
+      left: 1.2rem;
       content: '';
       display: block;
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       background: url(../images/icons/answer.svg) no-repeat top left;
       background-size: cover; }
-    .questions-list a:hover, .questions-list a:focus {
+    .question a:hover, .question a:focus {
       border: 1px solid #80BDFF;
       -webkit-box-shadow: 0 0 2px 2px #BFDEFF;
       box-shadow: 0 0 2px 2px #BFDEFF; }
-  .questions-list h3 {
-    font-size: 1rem;
-    margin-bottom: .2rem;
-    font-weight: 400;
-    line-height: 1.6; }
 
 /* Listes de liens
 --------------------------------------------------------------------------- */
@@ -855,5 +878,7 @@ p.section-intro {
   flex-direction: row;
   -ms-flex-pack: distribute;
   justify-content: space-around; }
+  .footer-links a {
+    color: #738297; }
 
 /*# sourceMappingURL=styles.css.map */

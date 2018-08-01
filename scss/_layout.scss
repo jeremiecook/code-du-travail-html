@@ -13,6 +13,7 @@ $bp-desktop: 1200px;
 $cl-background-light: #F8F9FC;
 $cl-background-dark: #EBEFF3;
 $cl-title: #006AB2;
+$cl-link: #006AB2;
 $cl-paragraph: #738297;
 
 $tr-default: all .3s ease;
@@ -29,6 +30,20 @@ $tr-default: all .3s ease;
 	}
 }
 
+// Pour les textes, paragraphes etc.
+.inner {
+	max-width: 620px;
+	margin: 0 auto;
+}
+
+
+/* Sections
+--------------------------------------------------------------------------- */
+
+section {
+	padding: 1rem 0;
+}
+
 
 /* Page
 --------------------------------------------------------------------------- */
@@ -42,12 +57,11 @@ html, body {
 header {
 	position: relative;
 	background: #FFF;
-	padding: 40px 0;
+	padding: 2rem 0;
 
 	.logo {
 
 		display: flex;
-		margin-bottom: 40px;
 
 		img {
 			width: 120px;
@@ -59,8 +73,13 @@ header {
 			text-decoration: none;
 			font-size: 1rem;
 			font-weight: 400;
+			color: $cl-paragraph;
 		}
 
+	}
+
+	.section-header {
+		margin-top: 2rem;
 	}
 
 	@include curved-shadow();
